@@ -1,13 +1,5 @@
 <?php
 
-//namespace Vagge\JuniorDevelopmentAssignment\model;
-
-//require_once dirname(__DIR__, 2) . '/public/config/config.php';
-//require_once dirname(__DIR__, 2)'config.php';
-
-//use PDO;
-//use PDOException;
-
 class Database
 {
 
@@ -41,7 +33,7 @@ class Database
         return $this->stmt->execute();
     }
 
-    public function resultSet()
+    public function resultSet(): false|array
     {
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -53,10 +45,8 @@ class Database
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function rowCount()
+    public function rowCount(): int
     {
         return $this->stmt->rowCount();
     }
-
-
 }
