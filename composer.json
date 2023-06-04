@@ -1,0 +1,16 @@
+{
+    "name": "vagge/junior-development-assignment",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Vagge\\JuniorDevelopmentAssignment\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vagg-Davios",
+            "email": "evaggelosdavios@gmail.com"
+        }
+    ],
+    "require": {}
+}
