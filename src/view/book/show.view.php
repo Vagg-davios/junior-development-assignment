@@ -1,4 +1,5 @@
-<?= require_once __DIR__ . '/layout/header.view.php'; ?>
+<?= view('/layout/header.view.php'); ?>
+<pre class="text-4xl"><?= $headerText ?></pre>
 <div class="flex flex-col items-center bg-white  rounded-lg shadow md:flex-row  ">
     <img class=" rounded-t-lg" width="400em" src="<?= $book["img_url"] ?>" alt="">
     <div class="flex flex-col justify-between p-4 ml-4 leading-normal">
@@ -14,6 +15,5 @@
 
     </div>
 </div>
-
-<?= require_once __DIR__ . '/layout/footer.view.php'; ?>
+<?= view('/layout/footer.view.php'); ?>
 

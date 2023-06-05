@@ -1,12 +1,9 @@
-<?php
-require_once __DIR__ . '/layout/header.view.php';
-echo $headerText;
-?>
-
+<?php view('/layout/header.view.php'); ?>
+<pre class="text-4xl"><?= $headerText ?></pre>
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <?php foreach($booksArray as $book) : ?>
+            <?php foreach($books as $book) : ?>
             <div class="border-dashed border-2 rounded-lg p-4">
                 <img class="h-64 max-w-full rounded-lg " src=<?= empty($book["img_url"]) ? "https://islandpress.org/sites/default/files/default_book_cover_2015.jpg" : $book["img_url"] ?>  alt="">
                 <pre><?= $book["title"] ?></pre>
@@ -19,6 +16,5 @@ echo $headerText;
         </div>
     </div>
 </main>
-
-<?php require_once __DIR__ . '/layout/footer.view.php'; ?>
+<?php view('/layout/footer.view.php'); ?>
 
