@@ -17,4 +17,13 @@ class Book {
         return $this->db->resultSet();
     }
 
+    public function getBook($id): array
+    {
+        $this->db->query('SELECT * FROM books WHERE book_id = :id');
+        $this->db->bind(':id', $id);
+        $this->db->execute();
+
+        return $this->db->single();
+    }
+
 }
