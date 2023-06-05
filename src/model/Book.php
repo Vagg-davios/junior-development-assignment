@@ -1,6 +1,8 @@
 <?php
 
-require dirname(__DIR__,2) . '/public/config/Database.php';
+use Database\Database;
+
+require_once 'Database.php';
 
 class Book {
 
