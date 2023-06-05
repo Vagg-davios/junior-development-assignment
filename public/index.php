@@ -14,6 +14,7 @@ $BASE = dirname(__DIR__);
 $routes = [
     '/' => $BASE . "/src/controller/index.php",
     '/borrowed' => $BASE . "/src/controller/borrowedBooks.php",
+    '/book' => $BASE . "/src/controller/book.php",
 ];
 
 function routeToController($uri, $routes)
