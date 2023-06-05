@@ -2,9 +2,13 @@
     "name": "vagge/junior-development-assignment",
     "type": "project",
     "autoload": {
-        "psr-4": {
-            "Vagge\\JuniorDevelopmentAssignment\\": "src/"
-        }
+        "files": [
+            "src/config/config.php",
+            "src/config/functions.php"
+        ],
+        "classmap": [
+            "src/"
+        ]
     },
     "authors": [
         {
@@ -12,5 +16,7 @@
             "email": "evaggelosdavios@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-pdo": "*"
+    }
 }
