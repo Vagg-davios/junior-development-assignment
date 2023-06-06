@@ -8,6 +8,7 @@ use PDOStatement;
 
 class Database
 {
+    private static ?Database $instance = null;
     private ?PDO $pdo = null;
     private ?PDOStatement $stmt;
 
@@ -26,6 +27,15 @@ class Database
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
+    }
+
+    public static function getInstance(): Database
+    {
+        if(self::$instance === null){
+            self::$instance = new Database();
+        }
+
+        return self::$instance;
     }
 
     public function query($sql): false|PDOStatement
