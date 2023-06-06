@@ -1,8 +1,6 @@
 <?php
 
-use Database\Database;
-
-require_once 'Database.php';
+Use Core\Database;
 
 class Book {
 
