@@ -83,3 +83,5 @@ $res = $user->register([
 view('/user/login.view.php', [
     'successMessage' => "Account creation successful. You can now log-in."
 ]);
+
+exit();
