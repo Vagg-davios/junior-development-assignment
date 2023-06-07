@@ -10,12 +10,10 @@ use JetBrains\PhpStorm\NoReturn;
     die();
 }
 
-;
-
 function formatUrl($url): array
 {
     $path = explode(ROOT, $url);
-    return parse_url($path[1]);
+    return parse_url($path[1] ?? exit("Not allowed to access this page"));
 }
 
 spl_autoload_register(function ($class) {
