@@ -1,7 +1,5 @@
 <?php
 
-use Core\Validator;
-
 $user = new User();
 
 $full_name = $_POST['full-name'];
@@ -27,7 +25,6 @@ $errors = [];
 //    }
 //}
 //---------------------------------------------------------------------
-
 
 $validations = [
     'email' => [
@@ -63,7 +60,7 @@ foreach ($validations as $field => $validation) {
     }
 }
 
-if($user->userExists($email)){
+if ($user->userExists($email)) {
     $errors['email'] = 'Email already exists';
 }
 
@@ -73,15 +70,16 @@ if (!empty($errors)) {
     exit();
 }
 
-$res = $user->register([
+
+$user->register([
     "full-name" => $full_name,
     "username" => $username,
     "email" => $email,
     "password" => password_hash($password, PASSWORD_DEFAULT)
 ]);
 
-view('/user/login.view.php', [
-    'successMessage' => "Account creation successful. You can now log-in."
-]);
-
+header("Location: ./login");
+$_SESSION['successMessage'] = "Account created successfully. You can now log-in.";
 exit();
+
+
