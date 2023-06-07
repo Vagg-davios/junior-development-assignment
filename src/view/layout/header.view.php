@@ -24,7 +24,7 @@
             </div>
             <div class="hidden md:block">
                 <div class="ml-4 flex items-center md:ml-6">
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Log out</a>
+                    <a href="./logout" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Log out</a>
                 </div>
             </div>
             <div class="-mr-2 flex md:hidden">
