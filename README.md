@@ -1,6 +1,6 @@
 # junior-software-assignment
 
-This is an assignment for an entry PHP developer job @ **Epignosis**. It was quite the journey. I did not know that PHP had evolved so much, so there was basically a whole lot of learning on the fly.
+This is an assignment for an entry PHP developer job @ **Epignosis**. It was quite the journey. I did not know that PHP had evolved so much, so there was basically a whole lot of learning on the fly. There's a few things I did not get to add like tests and a few edge-case handlers due to limited time so those will be later on.
 
 ## Installation 🛠
 1. Download as .zip or clone this repo using  
