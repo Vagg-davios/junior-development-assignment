@@ -6,9 +6,20 @@ class User
 {
 
     private ?Database $db;
+    private static ?int $userId;
 
     public function __construct(){
         $this->db = Database::getInstance();
+    }
+
+    public static function getUserId(): ?int
+    {
+        return self::$userId;
+    }
+
+    private static function setUserId(int $userId): void
+    {
+        self::$userId = $userId;
     }
 
     public function userExists($email): bool
@@ -31,6 +42,18 @@ class User
         return $this->db->execute();
     }
 
+    public function login($username, $password): bool
+    {
+        $this->db->query("SELECT * FROM users WHERE username = :username");
+        $this->db->bind(':username', $username);
+        $user = $this->db->single();
+
+        if(!$user || !password_verify($password, $user['password'])) return false;
+
+        self::setUserId($user['user_id']); // Is this bad security?
+
+        return true;
+    }
 
 
 
