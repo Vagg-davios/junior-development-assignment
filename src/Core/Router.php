@@ -11,9 +11,9 @@ class Router
 
     private function add($uri, $controller, $method): Router
     {
-        $this->routes[] = [ // or use compact('uri', 'controller', 'method')
+        $this->routes[] = [ // or use compact('uri', 'Controller', 'method')
             'uri' => $uri,
-            'controller' => $controller,
+            'Controller' => $controller,
             'method' => $method,
             'middleware' => null
         ];
@@ -52,11 +52,11 @@ class Router
             {
                 Middleware::resolve($route['middleware']); // get the middleware name from the route table and resolve it
 
-                return require_once $route['controller']; // route to corresponding controller
+                return require_once $route['Controller']; // route to corresponding Controller
             }
 
         }
 
-        return require_once view('/codes/_404.view.php'); // or throw 404 screen
+        return require_once view('/codes/_404.View.php'); // or throw 404 screen
     }
 }

@@ -1,4 +1,4 @@
-<?= view('/layout/header.view.php'); ?>
+<?= view('/layout/header.View.php'); ?>
 <pre class="text-4xl"><?= $headerText ?></pre>
 <div class="flex flex-col items-center bg-white  rounded-lg shadow md:flex-row  ">
     <img class=" rounded-t-lg" width="400em" src="<?= $book["img_url"] ?>" alt="">
@@ -18,5 +18,5 @@
         </form>
     </div>
 </div>
-<?= view('/layout/footer.view.php'); ?>
+<?= view('/layout/footer.View.php'); ?>
 

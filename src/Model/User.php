@@ -42,10 +42,10 @@ class User
         return $this->db->execute();
     }
 
-    public function login($username, $password): bool
+    public function login($email, $password): bool
     {
-        $this->db->query("SELECT * FROM users WHERE username = :username");
-        $this->db->bind(':username', $username);
+        $this->db->query("SELECT * FROM users WHERE email = :email");
+        $this->db->bind(':email', $email);
         $user = $this->db->single();
 
         if(!$user || !password_verify($password, $user['password'])) return false;
@@ -54,8 +54,4 @@ class User
 
         return true;
     }
-
-
-
-
 }

@@ -1,4 +1,4 @@
-<?php view('/layout/header.view.php'); ?>
+<?php view('/layout/header.View.php'); ?>
 <pre class="text-4xl"><?= $headerText ?></pre>
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
@@ -16,5 +16,5 @@
         </div>
     </div>
 </main>
-<?php view('/layout/footer.view.php'); ?>
+<?php view('/layout/footer.View.php'); ?>
 

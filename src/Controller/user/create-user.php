@@ -66,10 +66,9 @@ if ($user->userExists($email)) {
 
 if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
-    view('/user/register.view.php', compact('errors'));
+    view('/user/register.View.php', compact('errors'));
     exit();
 }
-
 
 $user->register([
     "full-name" => $full_name,

@@ -35,7 +35,7 @@ if(!$user->login($email, $password)) {
 
 if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
-    view('/user/login.view.php', compact('errors'));
+    view('/user/login.View.php', compact('errors'));
     exit();
 }
 

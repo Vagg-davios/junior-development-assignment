@@ -20,7 +20,7 @@ spl_autoload_register(function ($class) {
     $class = str_replace('\\', DIRECTORY_SEPARATOR, $class); // replace / with \ in url
 
     $coreFile = base_path("/src/{$class}.php");
-    $modelFile = base_path("/src/model/" . basename($class) . '.php'); // avoid the namespace core for this one using basename
+    $modelFile = base_path("/src/Model/" . basename($class) . '.php'); // avoid the namespace core for this one using basename
 
     if (file_exists($coreFile)) {
         require $coreFile;
@@ -39,10 +39,10 @@ function view($path, $attributes = []): string
 {
     extract($attributes);
 
-    return require_once base_path('src/view') . $path;
+    return require_once base_path('src/View') . $path;
 }
 
 function model($path): string
 {
-    return require_once base_path('src/model') . $path;
+    return require_once base_path('src/Model') . $path;
 }

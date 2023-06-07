@@ -1,4 +1,4 @@
-<?php view('/layout/header.view.php'); ?>
+<?php view('/layout/header.View.php'); ?>
 <main class="grid min-h-full place-items-top bg-white px-6 py-24 sm:py-32 lg:px-8">
     <div class="text-center">
         <p class="text-base font-semibold text-indigo-600">404</p>
@@ -10,6 +10,6 @@
                 back home</a>
         </div>
     </div>
-    <?php view('/layout/footer.view.php'); ?>
+    <?php view('/layout/footer.View.php'); ?>
 
 
