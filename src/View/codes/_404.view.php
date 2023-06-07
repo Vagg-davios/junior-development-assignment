@@ -10,6 +10,7 @@
                 back home</a>
         </div>
     </div>
-    <?php view('/layout/footer.View.php'); ?>
+</main>
+<?php view('/layout/footer.View.php'); ?>
 
 

@@ -8,7 +8,8 @@ class User
     private ?Database $db;
     private static ?int $userId;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->db = Database::getInstance();
     }
 
@@ -48,7 +49,7 @@ class User
         $this->db->bind(':email', $email);
         $user = $this->db->single();
 
-        if(!$user || !password_verify($password, $user['password'])) return false;
+        if (!$user || !password_verify($password, $user['password'])) return false;
 
         self::setUserId($user['user_id']); // Is this bad security?
 

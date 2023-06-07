@@ -48,14 +48,12 @@ class Router
      */
     public function route(string $uri, string $method)
     {
-        foreach($this->routes as $route) {
-            if ($route['uri'] === $uri && $route['method'] === strtoupper($method))
-            {
+        foreach ($this->routes as $route) {
+            if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
                 Middleware::resolve($route['middleware']); // get the middleware name from the route table and resolve it
 
                 return require_once $route['Controller']; // route to corresponding Controller
             }
-
         }
 
         return require_once view('/codes/_404.View.php'); // or throw 404 screen

@@ -6,7 +6,7 @@ $due_date = $_POST['due_date'];
 
 $loans = new Loans();
 
-if($loans->getLoans($_SESSION['user']) >= 3) {
+if ($loans->getLoans($_SESSION['user']) >= 3) {
     $_SESSION['error'] = "You can't borrow more than 3 books!";
     header("Location: ./borrowed");
     exit();

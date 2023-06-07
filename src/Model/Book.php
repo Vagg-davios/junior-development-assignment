@@ -1,12 +1,14 @@
 <?php
 
-Use Core\Database;
+use Core\Database;
 
-class Book {
+class Book
+{
 
     private ?Database $db;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->db = Database::getInstance();
     }
 

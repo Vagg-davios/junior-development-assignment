@@ -29,7 +29,7 @@ if (!$user->userExists($email)) {
     $errors['email'] = 'User with that email does not exist';
 }
 
-if(!$user->login($email, $password)) {
+if (!$user->login($email, $password)) {
     $errors['password'] = 'Incorrect password';
 }
 

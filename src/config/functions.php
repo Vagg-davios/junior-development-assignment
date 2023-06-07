@@ -8,9 +8,11 @@ use JetBrains\PhpStorm\NoReturn;
     var_dump($data);
     echo '</pre>';
     die();
-};
+}
 
-function formatUrl($url) : array
+;
+
+function formatUrl($url): array
 {
     $path = explode(ROOT, $url);
     return parse_url($path[1]);
@@ -40,9 +42,4 @@ function view($path, $attributes = []): string
     extract($attributes);
 
     return require_once base_path('src/View') . $path;
-}
-
-function model($path): string
-{
-    return require_once base_path('src/Model') . $path;
 }

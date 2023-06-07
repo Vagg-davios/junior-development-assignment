@@ -6,7 +6,5 @@ const DB_CHARSET = 'utf8mb4';
 const DB_USER = 'root';
 const DB_PASS = '';
 
-define("URL_ROOT", dirname(__FILE__, 2));
-
 const ROOT = '/junior-development-assignment/public';
 

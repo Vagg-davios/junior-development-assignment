@@ -55,7 +55,7 @@ $validations = [
 ];
 
 foreach ($validations as $field => $validation) {
-    if (!call_user_func_array(['Core\Validator', $validation['method']], $validation['args'])) {
+    if (!call_user_func_array(['Core\Validator', $validation['method']], $validation['args'])) { // call the corresponding method with the args
         $errors[$field] = $validation['message'];
     }
 }
