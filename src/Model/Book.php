@@ -10,9 +10,9 @@ class Book {
         $this->db = Database::getInstance();
     }
 
-    public function getBooks(): array
+    public function getAvailableBooks(): array
     {
-        $this->db->query('SELECT * FROM books');
+        $this->db->query('SELECT * FROM books WHERE book_id NOT IN (SELECT book_id FROM loans)');
         $this->db->execute();
         return $this->db->resultSet();
     }
