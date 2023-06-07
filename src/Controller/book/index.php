@@ -4,5 +4,7 @@ $books = new Book();
 
 view('/book/index.view.php', [
     'headerText' => "Available books:",
-    'books' => $books->getBooks(),
+    'books' => $books->getAvailableBooks(),
 ]);
+
+exit();
